@@ -79,11 +79,29 @@ const mainItem = document.getElementsByClassName("main-item");
 const asideImg = document.getElementsByClassName("aside-img");
     asideImg[indexItem].classList.add("selected");
 
+
 const arrowBottom = document.querySelector(".arrow-bottom");
     arrowBottom.addEventListener("click", function(){
+        if(indexItem < items.length - 1){
+            mainItem[indexItem].classList.add("hide");
+            asideImg[indexItem].classList.remove("selected");
 
-        
+            indexItem++;
 
+            mainItem[indexItem].classList.remove("hide");
+            asideImg[indexItem].classList.add("selected")
+        }
     });
 
 const arrowTop = document.querySelector(".arrow-top");
+    arrowTop.addEventListener("click", function(){
+        if(indexItem > 0){
+            mainItem[indexItem].classList.add("hide");
+            asideImg[indexItem].classList.remove("selected");
+
+            indexItem--;
+
+            mainItem[indexItem].classList.remove("hide");
+            asideImg[indexItem].classList.add("selected")
+        }
+    });
