@@ -4,11 +4,11 @@
     box-sizing: border-box;
     font-size: 100%;
 }
-.main-container, aside {
+.main-item, aside {
     height: 100vh;
     float: left;
 }
-.main-container {
+.main-item {
     width: 80%;
     position: relative;
 }
@@ -57,6 +57,7 @@ aside {
         align-items: center;
         justify-content: center;
         height: 35px;
+        cursor: pointer;
     }
         .arrow-top {
             top: 15px;
@@ -68,7 +69,7 @@ aside {
             left: 50%;
             transform: translate(-50%, 0);
         }
-    aside > div:not(.arrows) {
+    aside > div:not(.arrows, .frecce) {
         width: 100%;
         height: calc(100vh / 5);
         background-color: rgba(0, 0, 0, 1);
@@ -79,7 +80,7 @@ aside {
             height: 100%;
             object-position: center;
             object-fit: cover;
-            opacity: 0.5;
+            opacity: 0.7;
         }
         .selected {
             opacity: 1;
